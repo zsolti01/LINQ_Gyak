@@ -106,9 +106,15 @@ namespace LINQ_Gyak
 
             // 12.
             Console.WriteLine();
-            Console.WriteLine("12. Feladat. Úl lista csak a nevekkel és életkorokkal:");
+            Console.WriteLine("12. Feladat. Új lista csak a nevekkel és életkorokkal:");
             var ujlista2 = people.Select(x => new {x.Name, x.Age});
             foreach (var x in ujlista2) { Console.WriteLine(x.Name + ", " + x.Age); }
+            Console.WriteLine();
+
+            // 13.
+            Console.WriteLine("13. Feladat. A számok összege:");
+            var osszeg = numbers.Sum();
+            Console.WriteLine(osszeg);
             Console.WriteLine();
 
             Console.WriteLine();
