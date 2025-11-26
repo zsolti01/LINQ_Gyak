@@ -104,6 +104,13 @@ namespace LINQ_Gyak
             foreach (var x in ujlista) { Console.Write(x + ", "); }
             Console.WriteLine();
 
+            // 12.
+            Console.WriteLine();
+            Console.WriteLine("12. Feladat. Úl lista csak a nevekkel és életkorokkal:");
+            var ujlista2 = people.Select(x => new {x.Name, x.Age});
+            foreach (var x in ujlista2) { Console.WriteLine(x.Name + ", " + x.Age); }
+            Console.WriteLine();
+
             Console.WriteLine();
         }
 
