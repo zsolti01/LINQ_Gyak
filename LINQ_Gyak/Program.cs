@@ -30,9 +30,18 @@ namespace LINQ_Gyak
             Console.WriteLine();
             Console.WriteLine("1. Feladat. Az összes páros szám kiírása:");
             var paros = numbers.Where(x => x % 2 == 0);
-            foreach (var x in paros) { Console.Write(x); }
+            foreach (var x in paros) { Console.Write(x + ", "); }
             Console.WriteLine();
 
+
+            // 2.
+            Console.WriteLine();
+            Console.WriteLine("2. Feladat. A 10-nél nagyobb számok kiírása:");
+            var nagyobb10 = numbers.Where(x => x > 10);
+            foreach (var x in nagyobb10) { Console.Write(x + ", "); }
+            Console.WriteLine();
+
+            Console.WriteLine();
         }
 
         public class Person
