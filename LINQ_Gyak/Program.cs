@@ -43,8 +43,15 @@ namespace LINQ_Gyak
             // 3.
             Console.WriteLine();
             Console.WriteLine("3. Feladat. Több mint 4 karakter hosszú szavak kiírása:");
-            var hosszabb4 = words.Where(w => w.Length > 4);
+            var hosszabb4 = words.Where(x => x.Length > 4);
             foreach (var x in hosszabb4) { Console.Write(x + ", "); }
+            Console.WriteLine();
+
+            // 4.
+            Console.WriteLine();
+            Console.WriteLine("4. Feladat. Emberek, akik elmúltak 18 évesek kiírása:");
+            var plusz18 = people.Where(x => x.Age > 18);
+            foreach (var x in plusz18) { Console.WriteLine(x.Name + ", " + x.Age); }
             Console.WriteLine();
 
             Console.WriteLine();
