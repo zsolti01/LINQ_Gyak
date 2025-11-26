@@ -60,6 +60,13 @@ namespace LINQ_Gyak
             foreach (var x in novekvo) { Console.Write(x + ", "); }
             Console.WriteLine();
 
+            // 6.
+            Console.WriteLine();
+            Console.WriteLine("6. Feladat. A számok csökkenő sorrendbe");
+            var csokkeno = numbers.OrderByDescending(x => x);
+            foreach (var x in csokkeno) { Console.Write(x + ", "); };
+            Console.WriteLine();
+
             Console.WriteLine();
         }
 
