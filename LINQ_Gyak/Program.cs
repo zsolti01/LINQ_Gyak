@@ -33,12 +33,18 @@ namespace LINQ_Gyak
             foreach (var x in paros) { Console.Write(x + ", "); }
             Console.WriteLine();
 
-
             // 2.
             Console.WriteLine();
             Console.WriteLine("2. Feladat. A 10-nél nagyobb számok kiírása:");
             var nagyobb10 = numbers.Where(x => x > 10);
             foreach (var x in nagyobb10) { Console.Write(x + ", "); }
+            Console.WriteLine();
+
+            // 3.
+            Console.WriteLine();
+            Console.WriteLine("3. Feladat. Több mint 4 karakter hosszú szavak kiírása:");
+            var hosszabb4 = words.Where(w => w.Length > 4);
+            foreach (var x in hosszabb4) { Console.Write(x + ", "); }
             Console.WriteLine();
 
             Console.WriteLine();
