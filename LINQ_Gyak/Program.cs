@@ -83,6 +83,13 @@ namespace LINQ_Gyak
             foreach (var x in hosszSzavak) { Console.Write(x + ", "); }
             Console.WriteLine();
 
+            // 9.
+            Console.WriteLine();
+            Console.WriteLine("9. Feladat. Minden szám a négyzetén:");
+            var szavakNegyzete = numbers.Select(x => x * x);
+            foreach (var x in szavakNegyzete) { Console.Write(x + ", "); }
+            Console.WriteLine();
+
             Console.WriteLine();
         }
 
