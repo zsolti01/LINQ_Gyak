@@ -33,7 +33,6 @@ namespace LINQ_Gyak
             foreach (var x in paros) { Console.Write(x); }
             Console.WriteLine();
 
-            Console.WriteLine();
         }
 
         public class Person
