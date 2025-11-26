@@ -177,8 +177,54 @@ namespace LINQ_Gyak
             }
             Console.WriteLine();
 
+            // 24.
+            Console.WriteLine("24. Feladat. Van-e 20-nál nagyobb szám:");
+            bool vanNagyobb20 = numbers.Any(x => x > 20);
+            Console.WriteLine(vanNagyobb20);
             Console.WriteLine();
 
+            // 25.
+            Console.WriteLine("25. Feladat. Minden szám pozitív?");
+            bool mindenPozitiv = numbers.All(x => x > 0);
+            Console.WriteLine(mindenPozitiv);
+            Console.WriteLine();
+
+            // 26.
+            Console.WriteLine("26. Feladat. Az első 3 legkisebb szám:");
+            var elso3 = numbers.OrderBy(x => x).Take(3);
+            foreach (var x in elso3) Console.Write(x + ", ");
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // 27.
+            Console.WriteLine("27. Feladat. Az első 2 elem kihagyása:");
+            var utan2 = numbers.Skip(2);
+            foreach (var x in utan2) Console.Write(x + ", ");
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // 28.
+            Console.WriteLine("28. Feladat. Az első 25-nél nagyobb szám:");
+            var elso25Nagyobb = numbers.FirstOrDefault(x => x > 25);
+            Console.WriteLine(elso25Nagyobb);
+            Console.WriteLine();
+
+            // 29.
+            Console.WriteLine("29. Feladat. Minden iskola összes diákja:");
+            var iskolak = new List<List<string>>
+{
+    new List<string> { "Anna", "Béla" },
+    new List<string> { "Csilla", "Dávid" },
+    new List<string> { "Eszter", "Ferenc" }
+};
+            var osszesDiak = iskolak.SelectMany(s => s);
+            foreach (var d in osszesDiak) Console.WriteLine(d);
+            Console.WriteLine();
+
+            // 30.
+            Console.WriteLine("30. Feladat. Összes diák száma:");
+            int diakDb = iskolak.SelectMany(s => s).Count();
+            Console.WriteLine(diakDb);
 
         }
 
