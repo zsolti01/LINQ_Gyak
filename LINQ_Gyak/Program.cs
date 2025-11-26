@@ -117,6 +117,13 @@ namespace LINQ_Gyak
             Console.WriteLine(osszeg);
             Console.WriteLine();
 
+            // 14.
+            Console.WriteLine();
+            Console.WriteLine("14. Feladat. A legnagyobb szám:");
+            var legnagyobb = numbers.Max();
+            Console.WriteLine(legnagyobb);
+            Console.WriteLine();
+
             Console.WriteLine();
         }
 
