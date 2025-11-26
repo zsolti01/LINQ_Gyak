@@ -128,9 +128,58 @@ namespace LINQ_Gyak
             var vanA = words.Where(x => x.Contains('a'));
             int db = vanA.Count();
             Console.WriteLine(db);
+
+            // 16.
+            Console.WriteLine();
+            Console.WriteLine("16. Feladat. Az emberek átlagéletkora:");
+            var atlagEletkor = people.Average(p => p.Age);
+            Console.WriteLine(atlagEletkor);
+            Console.WriteLine();
+
+            // 17.
+            Console.WriteLine("17. Feladat. Az emberek város szerint:");
+            var varosSzerint = people.GroupBy(p => p.Address);
+            foreach (var group in varosSzerint)
+            {
+                Console.WriteLine($"{group.Key}:");
+                foreach (var p in group)
+                {
+                    Console.WriteLine($"  {p.Name}, {p.Age} ");
+                }
+            }
+            Console.WriteLine();
+
+            // 18.
+            Console.WriteLine("18. Feladat. Az emberek életkor szerint:");
+            var eletkorSzerintMegint = people.GroupBy(p => p.Age);
+            foreach (var group in eletkorSzerintMegint)
+            {
+                Console.WriteLine($"{group.Key} évesek:");
+                foreach (var p in group)
+                {
+                    Console.WriteLine($"  {p.Name}, {p.Address}");
+                }
+            }
+            Console.WriteLine();
+
+            // 19.
+            Console.WriteLine("19. Feladat. Hányan élnek Miskolcon:");
+            var miskolciak = people.Count(p => p.Address == "Miskolc");
+            Console.WriteLine(miskolciak);
+            Console.WriteLine();
+
+            // 20.
+            Console.WriteLine("20. Feladat. Szavak csoportosítása az első betűjük alapján:");
+            var elsoBetuSzerint = words.GroupBy(w => w[0]);
+            foreach (var group in elsoBetuSzerint)
+            {
+                Console.WriteLine($"{group.Key}: {string.Join(", ", group)}");
+            }
             Console.WriteLine();
 
             Console.WriteLine();
+
+
         }
 
         public class Person
