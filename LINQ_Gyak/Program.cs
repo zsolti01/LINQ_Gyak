@@ -90,6 +90,13 @@ namespace LINQ_Gyak
             foreach (var x in szavakNegyzete) { Console.Write(x + ", "); }
             Console.WriteLine();
 
+            // 10.
+            Console.WriteLine();
+            Console.WriteLine("10. Feladat. Nagybetűs szavak:");
+            var nagybetus = words.Select(x => x.ToUpper());
+            foreach (var x in nagybetus) { Console.Write(x + ", "); };
+            Console.WriteLine();
+
             Console.WriteLine();
         }
 
