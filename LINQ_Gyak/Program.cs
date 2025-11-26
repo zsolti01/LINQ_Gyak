@@ -97,6 +97,13 @@ namespace LINQ_Gyak
             foreach (var x in nagybetus) { Console.Write(x + ", "); };
             Console.WriteLine();
 
+            // 11.
+            Console.WriteLine();
+            Console.WriteLine("11. Feladat. Új lista csak a felhasználók neveivel:");
+            var ujlista = people.Select(x => x.Name);
+            foreach (var x in ujlista) { Console.Write(x + ", "); }
+            Console.WriteLine();
+
             Console.WriteLine();
         }
 
