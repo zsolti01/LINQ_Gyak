@@ -118,10 +118,16 @@ namespace LINQ_Gyak
             Console.WriteLine();
 
             // 14.
-            Console.WriteLine();
             Console.WriteLine("14. Feladat. A legnagyobb szám:");
             var legnagyobb = numbers.Max();
             Console.WriteLine(legnagyobb);
+            Console.WriteLine();
+
+            // 15.
+            Console.WriteLine("15. Feladat. Hány szó tartalmaz 'a' betűt:");
+            var vanA = words.Where(x => x.Contains('a'));
+            int db = vanA.Count();
+            Console.WriteLine(db);
             Console.WriteLine();
 
             Console.WriteLine();
