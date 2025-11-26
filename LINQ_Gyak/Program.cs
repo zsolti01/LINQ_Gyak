@@ -55,17 +55,24 @@ namespace LINQ_Gyak
             Console.WriteLine();
 
             // 5.
-            Console.WriteLine("5. Feladat. A számok növekvő sorrendbe");
+            Console.WriteLine("5. Feladat. A számok növekvő sorrendbe:");
             var novekvo = numbers.OrderBy(x => x);
             foreach (var x in novekvo) { Console.Write(x + ", "); }
             Console.WriteLine();
 
             // 6.
             Console.WriteLine();
-            Console.WriteLine("6. Feladat. A számok csökkenő sorrendbe");
+            Console.WriteLine("6. Feladat. A számok csökkenő sorrendbe:");
             var csokkeno = numbers.OrderByDescending(x => x);
             foreach (var x in csokkeno) { Console.Write(x + ", "); };
             Console.WriteLine();
+
+            // 7.
+            Console.WriteLine();
+            Console.WriteLine("7. Feladat. Az emberek életkor szerint rendezve:");
+            var eletkorSzerint = people.OrderBy(x => x.Age);
+            foreach (var x in eletkorSzerint) { Console.WriteLine(x.Name + ", " + x.Age); };
+
 
             Console.WriteLine();
         }
