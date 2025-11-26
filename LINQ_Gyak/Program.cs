@@ -73,6 +73,15 @@ namespace LINQ_Gyak
             var eletkorSzerint = people.OrderBy(x => x.Age);
             foreach (var x in eletkorSzerint) { Console.WriteLine(x.Name + ", " + x.Age); };
 
+            // 8.
+            Console.WriteLine();
+            Console.WriteLine("8. Feladat. A szavak abc sorrendbe, majd hossz szerint:");
+            var abcSzavak = words.OrderBy(x => x);
+            foreach (var x in abcSzavak) { Console.Write(x + ", "); }
+            var hosszSzavak = words.OrderBy(x => x.Length);
+            Console.WriteLine();
+            foreach (var x in hosszSzavak) { Console.Write(x + ", "); }
+            Console.WriteLine();
 
             Console.WriteLine();
         }
