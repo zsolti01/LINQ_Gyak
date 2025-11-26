@@ -28,30 +28,36 @@ namespace LINQ_Gyak
 
             // 1.
             Console.WriteLine();
-            Console.WriteLine("1. Feladat. Az összes páros szám kiírása:");
+            Console.WriteLine("1. Feladat. Az összes páros szám:");
             var paros = numbers.Where(x => x % 2 == 0);
             foreach (var x in paros) { Console.Write(x + ", "); }
             Console.WriteLine();
 
             // 2.
             Console.WriteLine();
-            Console.WriteLine("2. Feladat. A 10-nél nagyobb számok kiírása:");
+            Console.WriteLine("2. Feladat. A 10-nél nagyobb számok:");
             var nagyobb10 = numbers.Where(x => x > 10);
             foreach (var x in nagyobb10) { Console.Write(x + ", "); }
             Console.WriteLine();
 
             // 3.
             Console.WriteLine();
-            Console.WriteLine("3. Feladat. Több mint 4 karakter hosszú szavak kiírása:");
+            Console.WriteLine("3. Feladat. Több mint 4 karakter hosszú szavak:");
             var hosszabb4 = words.Where(x => x.Length > 4);
             foreach (var x in hosszabb4) { Console.Write(x + ", "); }
             Console.WriteLine();
 
             // 4.
             Console.WriteLine();
-            Console.WriteLine("4. Feladat. Emberek, akik elmúltak 18 évesek kiírása:");
+            Console.WriteLine("4. Feladat. Emberek, akik elmúltak 18 évesek:");
             var plusz18 = people.Where(x => x.Age > 18);
             foreach (var x in plusz18) { Console.WriteLine(x.Name + ", " + x.Age); }
+            Console.WriteLine();
+
+            // 5.
+            Console.WriteLine("5. Feladat. A számok növekvő sorrendbe");
+            var novekvo = numbers.OrderBy(x => x);
+            foreach (var x in novekvo) { Console.Write(x + ", "); }
             Console.WriteLine();
 
             Console.WriteLine();
